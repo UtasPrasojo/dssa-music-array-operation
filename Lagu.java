@@ -21,7 +21,7 @@ public class Lagu {
     public void tampilkanInfo() {
         System.out.println("Judul  : " + judul);
         System.out.println("Artis  : " + artis);
-        System.out.println("Durasi : " + durasi + " menit");
+        System.out.println("Durasi : " + String.format("%.2f", durasi) + " menit");
     }
 
     // Getter judul

@@ -131,6 +131,10 @@ public class PlaylistArray {
         jumlahLagu++;
 
         System.out.println("Lagu berhasil ditambahkan!");
+        
+        // Menampilkan daftar lagu saat ini
+        System.out.println("\nDaftar lagu saat ini:");
+        tampilkanRingkas();
     }
 
     // Method Delete untuk menghapus lagu berdasarkan judul
@@ -173,6 +177,10 @@ public class PlaylistArray {
         jumlahLagu--;
 
         System.out.println("Lagu \"" + judulCari + "\" berhasil dihapus dari playlist!");
+
+        // Menampilkan daftar lagu saat ini
+        System.out.println("\nDaftar lagu saat ini:");
+        tampilkanRingkas();
     }
 
     //Method searching menggunakan Linear Search
@@ -182,6 +190,10 @@ public class PlaylistArray {
             System.out.println("\nPlaylist masih kosong. Tidak ada lagu yang bisa dicari.");
             return;
         }
+
+        // Menampilkan daftar lagu saat ini
+        System.out.println("\nDaftar lagu saat ini:");
+        tampilkanRingkas();
 
         //Mencari judul lagu
         System.out.print("\nMasukkan judul lagu: ");
@@ -236,8 +248,7 @@ public class PlaylistArray {
     // Method bantuan untuk menampilkan daftar lagu dalam format ringkas satu baris per lagu
     private static void tampilkanRingkas() {
         for (int i = 0; i < jumlahLagu; i++) {
-            System.out.println((i + 1) + ". " + playlist[i].getJudul() + " - "
-                    + playlist[i].getArtis() + " (" + playlist[i].getDurasi() + " menit)");
+            System.out.println((i + 1) + ". " + playlist[i].getJudul() + " - " + playlist[i].getArtis() + " (" + String.format("%.2f", playlist[i].getDurasi()) + " menit)");
         }
     }
 }
