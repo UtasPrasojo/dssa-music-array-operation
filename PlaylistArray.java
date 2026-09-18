@@ -7,7 +7,6 @@
 
 import java.util.Scanner;
 
-
 public class PlaylistArray {
     // Scanner untuk menerima input dari pengguna
     static Scanner input = new Scanner(System.in);
@@ -185,7 +184,7 @@ public class PlaylistArray {
         }
 
         //Mencari judul lagu
-        System.out.println("\nMasukkan judul lagu: ");
+        System.out.print("\nMasukkan judul lagu: ");
         String judulCari = input.nextLine();
 
         //Linear Search
